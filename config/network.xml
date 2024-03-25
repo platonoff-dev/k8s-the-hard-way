@@ -1,0 +1,11 @@
+<network>
+  <name>k8s-net</name>
+  <bridge name='virbr0'/>
+  <forward/>
+  <domain name='k8s-thw.local' localOnly='yes'/>
+  <ip address='10.0.0.1' netmask='255.255.255.0'>
+    <dhcp>
+      <range start='10.0.0.2' end='10.0.0.254'/>
+    </dhcp>
+  </ip>
+</network>

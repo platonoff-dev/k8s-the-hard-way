@@ -1,0 +1,14 @@
+[Unit]
+Before=systemd-user-sessions.service
+Wants=network-online.target
+After=network-online.target
+ConditionPathExists=!/var/lib/started-ok
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/start.sh
+ExecStartPost=/usr/bin/touch /var/lib/started-ok
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
