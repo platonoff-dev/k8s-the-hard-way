@@ -8,7 +8,6 @@ storage:
         inline: "${HOST_NAME}.${DOMAIN_NAME}"
 passwd:
   users:
-    - name: core
+    - name: root
       ssh_authorized_keys:
         - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOXU66AnXlGnT6EihSomvIjmA584LpjWzMVFDKfMCij8 anatolii@MiWiFi-RB01-srv"
-      password_hash: "$y$j9T$e2Ow7vQ.i3Fz6Hypb.Vt5.$/uMHPVGil3YNBOTOIE/c3ITv/Sl81.fv6PfoWnDTtjB"
