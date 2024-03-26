@@ -70,7 +70,6 @@ do
 	echo "Waiting for master ips - $count - $(date +'%H:%m:%S')"
 	if [ $count = 3 ]
 	then
-		echo $ip
 		break
 	fi
 	sleep 1
@@ -92,3 +91,14 @@ DEST_PATH=runtime/config.bu \
 	generate_config
 
 start_vm
+
+for (( ; ; ))
+do
+	balancer_ip=$(sudo virsh -q domifaddr loadbalancer | awk '{print $4}' | cut -f1 -d"/")
+	echo "Waiting for balancer ips - $(date +'%H:%m:%S')"
+	if [ $(echo $balancer_ip | wc -w) = 1 ]
+	then
+		break
+	fi
+	sleep 1
+done
