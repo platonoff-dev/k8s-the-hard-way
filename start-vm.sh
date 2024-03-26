@@ -1,7 +1,7 @@
 #!/bin/bash
 
 IGNITION_CONFIG="$(pwd)/runtime/config.ign"
-IMAGE="$(pwd)/runtime/fedora-coreos-39.20240225.3.0-qemu.x86_64.qcow2"
+IMAGE="$(pwd)/downloads/fedora-coreos-39.20240225.3.0-qemu.x86_64.qcow2"
 VCPUS="2"
 RAM_MB="2048"
 STREAM="stable"

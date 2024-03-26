@@ -10,9 +10,4 @@ done
 sudo virsh net-destroy k8s-net
 sudo virsh net-undefine k8s-net
 
-sudo rm -rf runtime/disks
-rm -f runtime/config.ign
-rm -f runtime/config.bu
-rm -f runtime/haproxy.cfg
-rm -rf runtime/certs
-rm -rf runtime/kubeconfigs
+sudo rm -rf runtime
